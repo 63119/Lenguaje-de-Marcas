@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Javier" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css"rel="stylesheet" href="Estilos//estiloFormulario.css">
+    <title>Elementos del Formulario</title>
+</head>
+<body>
+    <!--Encabezado/Navegación-->
+    <nav> 
+        <a href="Tutorial_HTML_y_CSS.html">Introducción</a> |
+        <a href="Tutorial_HTML.html">Tutorial HTML</a> |
+        <a href="Tutorial_CSS.html">Tutorial CSS</a> 
+      </nav>
+      <!--Tutorial-->
+    <h2>Elementos del Formulario</h2>
+    <p>El HTML nos propone una gran diversidad de alternativas a la hora de crear nuestros formularios. Estas van desde la 
+        clásica caja de texto hasta la lista de opciones pasando por las cajas de validación.</p>
+    <p><b><u>Texto corto</u></b></p>
+    <p>Las cajas de texto son colocadas por medio de la etiqueta <b><code class="colorcode">&lt;input&gt;</code></b>. Dentro de esta etiqueta hemos de especificar el 
+        valor de dos atributos: <b>type y name</b>.</p>
+    <p>La etiqueta se escribe así: <b class="ejemploform">&lt;input type="text" name="nombre"&gt;</b></p>
+    <p>De esta manera creamos la caja: <input type="text" name="nombre"></p>
+    <p><u>size</u></p>
+    <p>Define el tamaño de la caja en número de caracteres. Si al escribir el usuario llega al final de la caja, el texto ira 
+        desfilando a medida que se escribe haciendo desaparecer la parte de texto que queda a la izquierda.</p>
+    <p><u>maxlength</u></p>
+    <p>Indica el tamaño máximo del texto que puede ser tomado por el formulario. Indica el tamaño máximo real del texto que se 
+        puede escribir. Podemos tener una caja de texto con un tamaño aparente (size) que es menor que el tamaño máximo (maxlength). 
+        Lo que ocurrirá en este caso es que, al escribir, el texto ira desfilando dentro de la caja hasta que lleguemos a su tamaño 
+        máximo definido por maxlength, momento en el cual nos será imposible continuar escribiendo.</p>
+    <p><u>value</u></p>
+    <p>Asigna un valor definido al campo en cuestión. Ejemplo: <b class="ejemploform">&lt;input type="text" name="nombre" value="Formulario"&gt;</b></p>
+    <p>Genera un campo de este tipo: <input type="text" name="nombre" value="Formulario"></p>
+    <p><b><u>Texto oculto</u></b></p>
+    <p>Podemos esconder el texto escrito por medio asteriscos de manera a aportar una cierta confidencialidad. Se reemplaza el 
+        atributo <b>type="text" por type="password: <br><code class="colorcode">&lt;input type="password" name="nombre"&gt;</code></b></p>
+    <p>Así se ve: <input type="password" name="nombre" value="password"></p>
+    <p><b><u>Texto largo</u></b></p>
+    <p>Para poder escribir comódamente se debe de usar la etiqueta <b><code class="colorcode">&lt;textarea&gt;</code></b> y su cierre correspondiente.</p>
+    <p>Dentro de la etiqueta textarea deberemos indicar con el atributo name para asociar el contenido a un nombre. 
+        Además, podemos definir las dimensiones del campo a partir de los atributos siguientes:</p>
+    <p><u>rows</u></p>
+    <p>Define el número de líneas del campo de texto.</p>
+    <p><u>cols</u></p>
+    <p>Define el número de columnas del campo de texto.</p>
+    <p>La etiqueta queda por tanto de esta forma: <b class="ejemploform">&lt;textarea name="comentario" rows="10" cols="40"&gt;&lt;/textarea&gt;</b></p>
+    <p>El resultado es el siguiente: <br><br> <textarea name="comentario" rows="10" cols="40"></textarea></p>
+    <p>También se puede predefinir el contenido del campo, solo hayq que escribir dentro de la etiqueta que deseamos
+        atriburile. Quedaría así:<br><br> <b class="ejemploform">&lt;textarea name="comentario" rows="10" cols="40"&gt;Escribe tu comentario....&lt;/textarea&gt;</b></p>
+    <p>Aparecerá así:<br><br><textarea name="comentario" rows="10" cols="40">Escribe tu comentario....</textarea></p>
+    <h2>Otros elementos del Formulario</h2>
+    <p><b><u>Listas de opciones</u></b></p>
+    <p>Las listas de opciones son el tipo de menús desplegables que nos permiten elegir una (o varias) de las múltiples opciones que nos 
+        proponen. Para construirlas emplearemos una etiqueta con su respectivo cierre: <b><code class="colorcode">&lt;select&gt;</code></b>. Dentro de esta etiqueta 
+        definiremos su nombre por medio del atributo <b>name</b>. Cada opción será incluida en una línea precedida de la 
+        etiqueta <b><code class="colorcode">&lt;option&gt;</code></b></p>
+    <p>Ejemplo:</p>
+    <section class="ejemploformoption">
+    <b>&lt;select name="estacion"&gt;<br>
+    &lt;option>Primavera&lt;/option&gt;<br>
+    &lt;option>Verano&lt;/option&gt;<br>
+    &lt;option>Otoño&lt;/option&gt;<br>
+    &lt;option>Invierno&lt;/option&gt;<br>
+    &lt;/select&gt;</b>
+    </section>
+    <p>Resultado: <select name="estacion">
+        <option>Primavera</option>
+        <option>Verano</option>
+        <option>Otoño</option>
+        <option>Invierno</option>
+        </select></p>
+    <p>También se puede crear submenus de la siguiente manera con <b>optgroup</b> y su correspondiente etiqueta de cierre dentro del menu:</p>
+    <section class="ejemploformoption">
+        <b>&lt;select name=menuo&gt;<br>
+        &lt;option selected value=uno&gt;uno</option><br>
+        &lt;optgroup label=dos&gt;<br>
+        &lt;option value=dos_a&gt;dos - a</option><br>
+        &lt;option value=dos_b&gt;dos - b</option><br>
+        &lt;/optgroup&gt;<br>
+        &lt;option selected value=tres&gt;tres</option><br>
+        &lt;/select&gt;</b>
+    </section>
+    <p>Demostración: 
+        <select name=menuo>
+        <option selected value=uno>uno</option>
+        <optgroup label=dos>
+        <option value=dos_a>dos - a</option>
+        <option value=dos_b>dos - b</option>
+        </optgroup>
+        <option selected value=tres>tres</option>
+        </select></p>
+    <p>Esta estructura puede verse modificada principalmente a partir de otros dos atributos:</p>
+    <p><u>size</u></p>
+    <p>Indica el número de valores mostrados de la lista. El resto pueden ser vistos por medio de la barra lateral de desplazamiento.</p>
+    <p><u>multiple</u></p>
+    <p>Permite la selección de más varios elementos de la lista. Este atributo se expresa sin valor.</p>
+    <p>Así quedaría con los dos atributos puestos: <b class="ejemploform">&lt;select name="estacion" size="3" multiple&gt;</b></p>
+    <p>La etiqueta <b>&lt;option&gt;</b> puede ser matizada por medio de otros atributos.</p>
+    <p><u>selected</u></p>
+    <p>Este atributo indica que la opción que lo presenta esta elegida por defecto. Se cambiar la linea de 
+        <b>option</b> por <b class="ejemploform">&lt;option selected&gt;Otoño&lt;/option&gt;</b>, queda así: <select name="estacion">
+            <option>Primavera</option>
+            <option>Verano</option>
+            <option selected>Otoño</option>
+            <option>Invierno</option>
+            </select></p>
+    <p><u>value</u></p>
+    <p>Define el valor de la opción que será enviado al programa o correo electrónico si el usuario elige esa opción. 
+        Sería: <b>&lt;option value="1"&gt;Primavera&lt;/option&gt;</b>. Así en el correo recibiríamos: estacion=1 </p>
+    <p><b><u>Lista de valores posibles</u></b></p>
+    <p> Estas listas se crean con el <b>datalist que lleva un id y con option que contiene el atributo value</b>. Sería así:</p>
+    <section class="ejemploformoption">
+        <b>&lt;input name=sexo list=sexos&gt; <br>
+        &lt;datalist id=sexos&gt; <br>
+        &lt;option value=mujer&gt;<br>
+        &lt;option value=hombre&gt;<br>
+        &lt;/datalist&gt;</b>
+    </section>
+    <p>Demostración: 
+        <input name=sexo list=sexos>
+        <datalist id=sexos>
+        <option value=mujer>
+        <option value=hombre>
+        </datalist></p>
+    <p><b><u>Botones de radio</u></b></p>
+    <p>Existe otra alternativa para plantear una elección, en este caso, obligamos al usuario a elegir únicamente una de las opciones que 
+        se le proponen. La etiqueta empleada en este caso es <b><code class="colorcode">&lt;input&gt;</code></b> en la cual tendremos el atributo <b>type</b> ha de tomar el 
+        valor radio.</p>
+    <p>Ejemplo:</p>
+    <section class="ejemploformbotones">
+        <b>&lt;input type="radio" name="estacion" value="1"&gt;Primavera<br>
+        &lt;input type="radio" name="estacion" value="2"&gt;Verano<br>
+        &lt;input type="radio" name="estacion" value="3"&gt;Otoño<br>
+        &lt;input type="radio" name="estacion" value="4"&gt;Invierno</b>
+    </section>
+    <p>El resultado es este:</p>
+    <input type="radio" name="estacion" value="1">Primavera
+    <br>
+    <input type="radio" name="estacion" value="2">Verano
+    <br>
+    <input type="radio" name="estacion" value="3">Otoño
+    <br>
+    <input type="radio" name="estacion" value="4">Invierno
+    <p>Cabe señalar que es posible preseleccionar por defecto una de las opciones. Esto puede ser conseguido por 
+        medio del atributo  <b>checked:<br> <section class="ejemploformbotones">&lt;input type="radio" name="estacion" value="2" checked&gt;Verano</section></b></p>
+    <p><b><u>Cajas de validación</u></b></p>
+    <p>Este tipo de elementos pueden ser activados o desactivados por el visitante por un simple clic sobre la caja en cuestión. 
+        La sintaxis utilizada es:<br> <b><code class="colorcode">&lt;input type="checkbox" name="ejemplo&gt;Esto es un ejemplo</code></b></p>
+    <p>Ejemplo: <input type="checkbox" name="ejemplo">Esto es un ejemplo <br> <br> También podemos activar la caja de validación
+    con el atributo <b>checked</b>.</p>
+    <h2>Envio, borrado y otros elementos</h2>
+    <p><b><u>Botón de envío</b></u></p>
+    <p>Para crear el botón de enviar se realiza con la etiqueta <b>input: &lt;<code class="colorcode">input type="submit" value="Enviar"&gt;</code></b></p>
+    <p>Botón de enviar: <input type="submit" value="Enviar"></p>
+    <p><b><u>Botón de borrado</b></u></p>
+    <p>Este botón nos permitirá borrar el formulario por completo en el caso de que el usuario desee rehacerlo desde el principio. 
+        Su estructura es la siguiente: <b>&lt;<code class="colorcode">input type="reset" value="Borrar"&gt;</code></b></p>
+    <p>Botón de borrar: <input type="reset" value="Borrar"></p>
+    <p><b><u>Botones normales</b></u></p>
+    <p>También se pueden colocar botones normales, pulsables como cualquier otro botón.
+        Sintaxis: <b><code class="colorcode">&lt;input type=button value="Texto escrito en el botón"&gt;</code></b></p>
+    <p>Quedaría de esta manera: <input type=button value="botón normal"></p>
+    <p><b><u>Botón con enlaces</b></u></p>
+    <p>Para añadir un enlace a un botón se debe  es especificar la URL de destino en un <b>formulario</b> como una 
+        acción de los atributos <b>action</b>. Su sintaxis es la siguiente:</p>
+        <section class="ejemploformbotones">
+        <b>&lt;form action="Formulario.html"&gt; <br>
+        &lt;input type="submit" value="Actualizar la página"/&gt; <br>
+        &lt;/form&gt;</b>
+    </section>
+    <p>Botón con enlace: <form action="Formulario.html"><input type="submit" value="Actualizar la página"/></form></p>
+    <hr>
+    <!--Pie de Página-->
+    <footer>
+      <p class="piedepagina"><a href="Tutorial_HTML.html">Volver al tutorial</a></p>
+      <p class="piedepagina">Realizado Por: Javier</p>
+      <p class="piedepagina">Copyright © todos los derechos reservados</p>
+      <img class="derechos" src="Copyright//Derechos de autor.jpg">
+    </footer>
+  
+
+    
+
+
+
+    
+</body>
+</html>

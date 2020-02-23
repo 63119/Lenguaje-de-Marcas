@@ -1,0 +1,163 @@
+body{background-color:gainsboro;}
+h1{text-align: center;}
+h2{
+  text-align: center;
+  background-color: skyblue;
+}
+b.coloretiqueta{
+    color: crimson;
+  }
+code.colorcode{
+    color: crimson;
+  }
+ol.indice{font-size: 20px;}
+p{font-size: 18px;}
+div.tamañoletra{font-size: 18px;}
+p.nota{font-size: 16px;}
+table { border-collapse: collapse;}
+table,td{border: 1px solid black;}
+nav{font-size: 18px;}
+section.cajapiepagina {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
+}
+section.cajanavegacion {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 500px;
+  padding: 10px;
+  margin: 20px;
+}
+img.derechos{
+  margin-left: 40%;
+  width: 20%;
+}
+p.piedepagina{
+  font-size: 18px;
+  text-align: center;
+}
+div.metadatos {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:auto;
+  padding: 10px;
+  margin: 20px;
+}
+p.ejemplosub {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 400px;
+  padding: 10px;
+  margin: 20px;
+}
+p.resultadosub{
+  border: transparent;
+  background-color: lightsalmon;
+  font-size: 18px;
+  width: 100px;
+  padding: 10px;
+  margin: 20px;
+}
+div.ejemplolista {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 150px;
+  padding: 10px;
+  margin: 20px;
+}
+div.resultadolista{
+  border: transparent;
+  background-color: lightsalmon;
+  font-size: 18px;
+  width: 150px;
+  padding: 10px;
+  margin: 20px;
+}
+p.ejemploenlace {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+}
+b.ejemploenlace {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+}
+p.ejemploimg {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 200px;
+  padding: 10px;
+  margin: 20px;
+}
+section.resultadotabla{
+  border: transparent;
+  background-color: lightsalmon;
+  font-size: 18px;
+  width: 250px;
+  padding: 10px;
+  margin: 20px;
+}
+section.ejemplotabla {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 250px;
+  padding: 10px;
+  margin: 20px;
+}
+p.ejemploform {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 900px;
+  padding: 10px;
+  margin: 20px;
+}
+b.ejemploiframe {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 800px;
+  padding: 10px;
+  margin: 20px;
+}
+b.ejemplomultimedia {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 800px;
+  padding: 10px;
+  margin: 20px;
+}
+div.multimedia {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:900px;
+  padding: 10px;
+  margin: 20px;
+}
+div.ejemplomultimedia {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 450px;
+  padding: 10px;
+  margin: 20px;
+}

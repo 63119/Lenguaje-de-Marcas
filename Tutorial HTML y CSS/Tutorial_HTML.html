@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Javier" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="Logos/html.jpg">
+    <link type="text/css"rel="stylesheet" href="Estilos//estilohtml.css">
+    <title>Tutorial HTML</title>
+</head>
+<body>
+  <!--Encabezado/Navegación-->
+    <nav>
+      <a href="Tutorial_HTML_y_CSS.html">Introducción</a> |
+      <a href="Tutorial_CSS.html">Tutorial CSS</a> 
+    </nav>
+    <!--Tutorial-->
+    <h1>Tutorial de HTML</h1>
+    <hr/>
+    <ol class="indice"><a name="Indice"></a><b><u>Indice:</u></b>
+        <br><br>
+        <li><a href="#Sintaxis del HTML">Sintaxis del HTML</a></li>
+        <li><a href="#Metadatos">Metadatos</a></li>
+        <li><a href="#Formato de Párrafos">Formato de Párrafos</a></li>
+        <li><a href="#Formatear Texto">Formatear Texto</a></li>		
+        <li><a href="#Color, tamaño y tipo de letra">Color, tamaño y tipo de letra</a></li>
+        <li><a href="#Listas">Listas</a></li>
+        <li><a href="#Carácteres Especiales">Carácteres Especiales</a></li>
+        <li><a href="#Enlaces">Enlaces</a></li>
+        <li><a href="#Imágenes">Imágenes</a></li>
+        <li><a href="#Tablas">Tablas</a></li>
+        <li><a href="#Formularios">Formularios</a></li>
+        <li><a href="#Multimedia">Multimedia</a></li>
+    </ol>
+    <br>
+    <h2><a name="Sintaxis del HTML"></a>Sintaxis del HTML</h2>
+    <p>El HTML es un lenguaje que <b>basa su sintaxis en un elemento de base al que llamamos etiqueta</b>. La 
+        etiqueta presenta frecuentemente dos partes:</p>
+    <p><b>Una apertura</b> de forma general &lt;etiqueta&gt;</p>  
+    <p><b>Un cierre</b> de tipo &lt;/etiqueta&gt;</p>
+    <p>Las etiquetas <b><code class="colorcode">&lt;b&gt;</code> y <code class="colorcode">&lt;/b&gt;</code></b> definen un texto en negrita.</p>
+    <p>Las etiquetas <b><code class="colorcode">&lt;p&gt;</code> y <code class="colorcode">&lt;/p&gt</code>;</b> definen un párrafo.</p>
+    <br>
+    <p><b><u>Partes de un documento html</u></b></p>
+    <p>Un documento HTML ha de estar delimitado por la etiqueta <b><code class="colorcode">&lt;html&gt;</code> y <code class="colorcode">&lt;/html&gt;</code></b>.
+        Dentro de este documento, podemos asimismo distinguir dos partes principales:</p>
+    <p><b>El encabezado, delimitado por <code class="colorcode">&lt;head&gt;</code> y <code class="colorcode">&lt;/head&gt;</code></b> donde colocaremos etiquetas de índole informativo 
+        como por ejemplo el titulo de nuestra página.</p>
+    <p><b>El cuerpo, flanqueado por las etiquetas &lt;body&gt; y &lt;/body&gt;</b>, que será donde colocaremos nuestro texto e imágenes 
+      delimitados a su vez por otras etiquetas como las que hemos visto.</p>
+    <h2><a name="Metadatos"></a>Metadatos</h2>
+    <p>Cuando se crea un documento HTML se debe de incluir el <b><code class="colorcode">&lt;!DOCTYPE html&gt;</code></b> y el <b><code class="colorcode">&lt;html lang="es"&gt;</code></b>
+      (la usamos para definir el idioma de la página).</p>
+    <p>La cabecera HTML es el contenido del elemento <b><code class="colorcode">&lt;head&gt;</code></b>, el contenido no se muestra en la página.</p>
+    <p>Atributos que puede contener la cabecera:</p>
+    <div class="metadatos">
+      <li><b>&lt;meta charset="UTF-8"&gt;</b>: Describen datos de una forma «oficial» de introducir metadatos en un documento.</li>
+      <li>&lt;<b>meta name="Metadato" content="width=device-width, initial-scale=1.0"&gt;</b>: El name especifica el tipo de información que 
+        contiene y el content especifica el contenido &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;del metadato en sí.</li>
+      <li><b>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</b>: Agrega el favicon a tu sitio.</li>
+      <li><b>&lt;link type="text/css"rel="stylesheet" href="estilo.css"&gt;</b>: Se usa para referenciar el CSS.</li>
+      <li><b>&lt;title&gt;Titulo de la página&lt;/title&gt;</b>: Se usa para poner un título al documento.</li>
+    </div>
+    <p>Ejemplo:</p>
+    <img src="Capturas//Metadatos.png"> 
+    <h2><a name="Formato de Párrafos"></a>Formato de Párrafos</h2>
+    <p>Formatear un texto consiste en definir los párrafos, justificarlos, introducir viñetas, numeraciones 
+        o bien poner en negrita, itálica...</p>
+    <p>Para los párrafos se usa la etiqueta <b><code class="colorcode">&lt;p&gt;</code></b> que introduce un salto y deja una línea en blanco antes de continuar 
+        con el resto del documento.</p>
+    <p>También se puede usar la etiqueta <b><code class="colorcode">&lt;br&gt;</code></b> que no tiene cierre, con esta etiqueta se usa para cambiar de línea y no dejar una
+        línea en blanco.</p>
+    <p>Los párrafos delimitados por etiquetas pueden ser fácilmente justificados a la izquierda, centro o derecha especificando la 
+        justificación en el interior de la etiqueta por medio de un atributo llamado <b>align</b>. Un atributo no es más que un parámetro incluido en 
+        el interior de la etiqueta que ayuda a definir el funcionamiento de la etiqueta de una forma más personal. </p>
+    <p>La etiqueta <b><code class="colorcode">&lt;div&gt;</code></b> o <b><code class="colorcode">&lt;section&gt;</code></b> se usa para agrupar elementos. El atributo <b>align</b> se puede usar con la clase <b>div</b> para alinear 
+        todos los elementos de esa clase. Ejemplo:</p>
+    <p>Sin la clase div:</p>
+    <img src="Capturas//align sin div.png"> 
+    <p>Con la clase div:</p>
+    <img src="Capturas//align con div.png"> 
+    <p><b><u>Pie de Página</u></b></p>
+    <p>La etiqueta <b><code class="colorcode">&lt;footer&gt;</code></b> con su correspondiente cierre, define un pie de página para un documento o sección.</p>
+    <p>Ejemplo:</p>
+    <section class="cajapiepagina">
+      <b>&lt;footer&gt; <br>
+        &lt;p&gt;Realizado Por: Pie de Página&lt;/p&gt;<br>
+        &lt;p&gt;Información de Contacto: &lt;a href="correo:piedepagina@gmail.com"&gt;<br>
+          correo:piedepagina@gmail.com&lt;/a&gt;&lt;/p&gt;<br>
+        &lt;/footer&gt;</b>
+        </section>
+    <p><b><u>Navegación</u></b></p>
+    <p>La etiqueta <b><code class="colorcode">&lt;nav&gt;</code></b> con su correspondiente cierre, define un conjunto de enlaces de navegación.</p>
+    <p>Ejemplo:</p>
+    <section class="cajanavegacion">
+      <b>&lt;nav&gt;<br>
+        &lt;a href="Navegacion.html"&gt;Navegación&lt;/a&gt; <br>
+        &lt;a href="http://www.google.com"&gt;Goolge&lt;/a&gt; <br>
+      &lt;/nav&gt;</b>
+    </section>
+    <p><b><u>Encabezados</u></b></p>
+    <p> Los encabezados son etiquetas que formatean el texto como un titular, para lo cual asignan un tamaño mayor de letra y 
+        colocan el texto en negrita.</p>
+    <p>Hay varios tipos de encabezados, que se diferencian en el tamaño de la letra que utilizan. 
+        Esta etiqueta se comprende desde los encaabezados más grandes hasta los más pequeños, comprendiendose desde el <b><code class="colorcode">&lt;h1&gt;</code></b> hasta 
+        el <b><code class="colorcode">&lt;h6&gt;</code></b>, con sus respectivas etiquetas de cierre <b><code class="colorcode">&lt;/h1&gt;</code></b> y <b><code class="colorcode">&lt;/h6&gt;</code></b>. Ejemplo:</p>
+        <img src="Capturas//encabezados.png"> 
+    <h2><a name="Formatear Texto"></a>Formatear Texto</h2>
+    <p>Formatear el texto consiste en presentar texto resaltado en negrita, itálica y otros. También el uso de índices, subíndices, etc.</p>
+    <p><b><u>Texto en Negrita</u></b></p>
+    <p>Para excribir el texto en negrita, se utilizan las etiquetas <b><code class="colorcode">&lt;b&gt;</code></b> y <b><code class="colorcode">&lt;/b&gt;</code></b>. La otra 
+       opción es utilizar la etiqueta <b><code class="colorcode">&lt;strong&gt;</code></b> y <b>&lt;<code class="colorcode">/strong&gt;</code></b> siendo ambas equivalentes.</p>
+    <p>Al escrbir el código debe de aparecer así: <b>Negrita</b></p>
+    <p><b><u>Texto en Itálica</u></b></p>
+    <p>Para excribir el texto en itálica, hay dos opciones. Una es utilizando <b><code class="colorcode">&lt;i&gt;</code></b> y <b><code class="colorcode">&lt;/i&gt;</code></b>, y la otra 
+        opción es utilizar la etiqueta <b><code class="colorcode">&lt;em&gt;</code></b> y <b><code class="colorcode">&lt;/em&gt;</code></b> siendo ambas equivalentes.</p>
+    <p>Al escrbir el código debe de aparecer así: <i>Itálica</i></p>
+    <p><b><u>Texto en Subrayado</u></b></p>
+    <p>Para el subrayado se usa la etiqueta <b><code class="colorcode">&lt;u&gt;</code></b> y <b><code class="colorcode">&lt;/u&gt;</code></b>.</p>
+    <p>Al escrbir el código debe de aparecer así: <u>Subrayado</u></p>
+    <p><b><u>Subíndices y supraíndices</u></b></p>
+    <p>Las etiquetas empleadas son:</p>
+    <p><b><code class="colorcode">&lt;sup&gt;</code></b> y <b><code class="colorcode">&lt;/sup&gt;</code></b> para los supraíndices.</p>
+    <p><b><code class="colorcode">&lt;sub&gt;</code></b> y <b><code class="colorcode">&lt;/sub&gt;</code></b> para los subíndices.</p>
+    <p> <u>Ejemplo:</u></p>
+    <p class="ejemplosub"><b>&lt;sup&gt;13&lt;/sup&gt;CC&lt;sub&gt;3&lt;/sub&gt;H&lt;sub&gt;4&lt;/sub&gt;</b></p>
+    <p><u>Resultado:</u></p>
+    <p class="resultadosub"><i><sup>13</sup>CC<sub>3</sub>H<sub>4</sub></i></p>
+    <h2><a name="Color, tamaño y tipo de letra"></a>Color, tamaño y tipo de letra</h2>
+    <p> El color, tamaño ytipo de letra son controlados en el archivo css. Esto lo podeís ver en el Tutorial de CSS.</p>
+    <p>Esto se hace a partir de la etiqueta <b><code class="colorcode">&lt;font&gt;</code></b> y su cierre correspondiente. Dentro de esta etiqueta deberemos especificar 
+        los atributos correspondientes a cada uno de estos parámetros que deseamos definir.</p>
+    <p><b><u>Atributo face</u></b></p>
+    <p>Define el tipo de letra y muestra el texto con la fuente que utiliza.</p>
+    <p><u>Ejemplo:</u></p>
+    <p><b>&lt;font face="Comic Sans MS,arial,verdana"&gt;Este texto tiene otra tipografía&lt;/font&gt;</b> <font face="Comic Sans 
+        MS,arial,verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este texto tiene otra tipografía</font></p>
+    <p>Se pueden poner varios tipos de letra porque si el primer tipo de letra no funciona, cogería el segundo y se bebe limitar por
+        comillas.</p>
+    <p><b><u>Atributo size</u></b></p>
+    <p>Define el tamaño de la letra. Este tamaño puede ser absoluto o relativo.</p>
+
+    <p>Si hablamos en términos absolutos, existen 7 niveles de tamaño distintos numerados de 1 a 7 por orden creciente. 
+        Elegiremos por tanto un valor <b>size=1</b> para la letra más pequeña o <b>size=7</b> para la más grande.</p>
+    <p><u>Ejemplo:</u></p>
+    <p><b>&lt;font size=4&gt;Este texto es más grande&lt;/font&gt;</b></p>
+    <p><b><u>Atributo color</u></b></p>
+    <p>El color del texto puede ser definido mediante el atributo <b>color</b>. Cada color es a su vez definido por un número hexadecimal 
+        que esta compuesto a su vez de tres partes. Cada una de estas partes representa la contribución del rojo, verde y azul al color 
+        en cuestión.</p>
+    <p>Por otra parte, es posible definir de una manera inmediata algunos de los colores más frecuentemente usados para los que se 
+        ha creado un nombre más memotécnico:</p>
+    <TABLE align=center border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle><B>Nombre</B></TD>
+          <TD align=middle><B>Color</B></TD></TR>
+        <TR>
+          <TD>Aqua</TD>
+          <TD bgColor=aqua></TD></TR>
+        <TR>
+          <TD>Black</TD>
+          <TD bgColor=black></TD></TR>
+        <TR>
+          <TD>Blue</TD>
+          <TD bgColor=blue></TD></TR>
+        <TR>
+          <TD>Fuchsia</TD>
+          <TD bgColor=fuchsia></TD></TR>
+        <TR>
+          <TD>Gray</TD>
+          <TD bgColor=gray></TD></TR>
+        <TR>
+          <TD>Green</TD>
+          <TD bgColor=green></TD></TR>
+        <TR>
+          <TD>Lime</TD>
+          <TD bgColor=lime></TD></TR>
+        <TR>
+          <TD>Maroon</TD>
+          <TD bgColor=maroon></TD></TR>
+        <TR>
+          <TD>Navy</TD>
+          <TD bgColor=navy></TD></TR>
+        <TR>
+          <TD>Olive</TD>
+          <TD bgColor=olive></TD></TR>
+        <TR>
+          <TD>Purple</TD>
+          <TD bgColor=purple></TD></TR>
+        <TR>
+          <TD>Red</TD>
+          <TD bgColor=red></TD></TR>
+        <TR>
+          <TD>Silver</TD>
+          <TD bgColor=silver></TD></TR>
+        <TR>
+          <TD>Teal</TD>
+          <TD bgColor=teal></TD></TR>
+        <TR>
+          <TD>White</TD>
+          <TD bgColor=white></TD></TR>
+        <TR>
+          <TD>Yellow</TD>
+          <TD bgColor=yellow></TD></TR></TBODY></TABLE>
+      <div align="justify"><BR>
+    <p><u>Ejemplo:</u></p>
+    <p><b>&lt;font color="maroon"&gt;Este texto está en Marron&lt;/font&gt;</b><font color="maroon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este texto está 
+        en rojo</font></p>
+    <h3>Atributos para páginas</h3>
+    <p>Las páginas HTML pueden construirse con variedad de atributos que le pueden dar un aspecto a la página muy personalizado. 
+      Podemos definir atributos como el color de fondo, el color del texto o de los enlaces. Estos atributos se definen en la 
+      etiqueta <b>&lt;body&gt;</b>.</p>
+    <p><b><u>Atributos para fondos</u></b></p>
+    <div class="tamañoletra">
+    <li><b>bgcolor</b>: Especificamos un color de fondo para la página.</li>
+    <li><b>background</b>: Sirve para indicar la colocación de una imagen como fondo de la página. La imagen se coloca haciendo un mosaico.
+     Ejemplo: <b>&lt;body background="fondo.png"&gt;</b></li>
+    </div>
+    <p>Hay que tener en cuenta que el <b>bgcolor</b> en HTML5 no es compatible, por lo  tanto hay que hacerlo en un CSS. 
+      Para saber más haz <a href="Tutorial_CSS.html">click aquí</a></p>
+    <p><b><u>Color del texto</u></b></p>
+    <p><b>text</b>: Este atributo sirve para asignar el color del texto de la página. Por defecto es el negro.</p>
+    <p>Hay tres atributos para asignar el color de los enlaces de la página:</p>
+    <div class="tamañoletra">
+      <li><b>link</b>: El color de los enlaces que no han sido visitados. (por defecto es azul clarito)</li>
+      <li><b>vlink</b>: El color de los enlaces visitandos. (por defecto su color es morado)</li>
+      <li><b>alink</b>: Es el color de los enlaces activos.</li>
+    </div>
+    <p>Para aplicar todo esto hay que escribir en el <b>body</b> lo siguiente: <b>&lt;body bgcolor="#000000" text="#ffffff" link="#ffff33" 
+      alink="#ffffcc" alink="ffff00"&gt;</b></p>
+    <p><b><u>Márgenes</u></b></p>
+    <p>Con otros atributos de la etiqueta <b>&lt;body&gt;</b> se pueden asignan espacios de margen en las páginas</p>
+    <div class="tamañoletra">
+      <li><b>leftmargin</b>: para indicar el margen a la izquierda.</li>
+      <li><b>topmargin</b>: para indicar el margen arriba y debajo de la página.</li>
+      <li><b>rightmargin</b>: para indicar el margen a la derecha.</li>
+    </div>
+    <p>Para saber más del Color, tamaño y tipo de letra, haz <a href="Tutorial_CSS.html">click aquí</a></p>
+    <h2><a name="Listas"></a>Listas</h2>
+    <div class="tamañoletra">
+    <p>Hay tres tipos de listas:</p>
+    <li>Listas Desordenadas</li>
+    <li>Listas Ordendas</li>
+    <li>Listas de Definición</li>
+    </div>
+    <p><b><u>Listas Desordenadas</u></b></p>
+    <p>Son delimitadas por las etiquetas <b><code class="colorcode">&lt;ul&gt;</code> y <code class="colorcode">&lt;/ul&gt;</code></b>. Cada uno de los elementos de la lista es citado por medio de una 
+      etiqueta <b><code class="colorcode">&lt;li&gt;</code></b> (sin cierre, aunque no hay inconveniente en colocarlo). Ejemplo:</p>
+    <div class="ejemplolista">
+    <b>&lt;ul&gt; <br>
+      &lt;li&gt;Prueba 1 <br>
+      &lt;li&gt;Prueba 2 <br>
+      &lt;li&gt;Prueba 3 <br>
+    &lt;/ul&gt;</b> <br>
+    </div>
+    <p>Resultado:</p>
+    <div class="resultadolista">
+    <b><ul>
+      <li>Prueba 1
+      <li>Prueba 2
+      <li>Prueba 3
+    </ul></b>
+    </div>
+    <p>También se puede definir el tipo de viñeta por el atributo type, este atributo se añade dentro de la etiqueta &lt;ul&gt; o dentro
+      de la etiqueta &lt;li&gt;.</p>
+    <div class="tamañoletra">
+    <p><u>Tipos de viñeta:</u></p>
+      <li type="circle"><b>circle</b></li>
+      <li type="disc"><b>disc</b></li>
+      <li type="square"><b>square</b></li>
+    </div>
+    <p><b><u>Listas Ordenadas</u></b></p>
+    <p>Para este tipo de listas se utiliza la etiqueta <b><code class="colorcode">&lt;ol&gt;</code> y <code class="colorcode">&lt;/ol&gt;</code></b> y 
+      cada elemento sera igualmente precedido de su etiqueta <b><code class="colorcode">&lt;li&gt;</code></b>. Su estructura es la siguiente:</p>
+    <div class="ejemplolista">
+    <b>&lt;ol&gt; <br>
+      &lt;li&gt;<br>
+      &lt;li&gt;<br>
+    &lt;/ol&gt;</b> <br>
+    </div>
+    <p>En este caso también existen varios tipos de viñeta:</p>
+    <div class="tamañoletra">
+    <ol>
+    <li type="1"><b>Por Números</b></li>
+    <li type="a"><b>Por Letras</b></li>
+    <li type="A"><b>Por Letras Mayúsculas</b></li>
+    <li type="i"><b>Por Números Romanos</b></li>
+    </ol>
+  </div>
+  <p><b><u>Listas de Definición</u></b></p>
+  <p>Cada elemento es presentado junto con su definición. La etiqueta principal es <b><code class="colorcode">&lt;dl&gt;</code> y <code class="colorcode">&lt;/dl&gt;</code></b>. La etiquetas del 
+    elemento y su definición son <b><code class="colorcode">&lt;dt&gt;</code> y <code class="colorcode">&lt;dd&gt;</code></b> respectivamente.</p>
+  <p>El código sería así:</p>
+  <div class="ejemplolista">
+  <b>&lt;dl&gt;<br>
+    &lt;dt&gt;definition term<br>
+    &lt;dd&gt;definition definition<br>
+  &lt;/dl&gt;</b><br>
+  </div>
+  <p>Resultado:</p>
+  <div class="resultadolista">
+  <b><dl>
+    <dt>definition term
+    <dd>definition definition
+  </dl></b>
+  </div>
+  <p>Hay que tener en cuenta que también se pueden anidar las listas, consiguiendo así listas mixtas.</p>
+  <h2><a name="Carácteres Especiales"></a>Carácteres Especiales</h2>
+  <p>Este conjunto son los carácteres especiales. Cuando queremos poner uno de estos carácteres en una 
+    página, debemos sustituirlo por su código.</p>
+  <img src="Capturas//caracteres especiales.png">
+  <h2><a name="Enlaces"></a>Enlaces</h2>
+  <p>Para colocar un enlace, nos serviremos de las etiquetas <b><code class="colorcode">&lt;a&gt;</code> y <code class="colorcode">&lt;/a&gt;</code></b>. Dentro de la etiqueta de apertura 
+    deberemos especificar asimismo el destino del enlace. Este destino será introducido bajo forma de atributo, el cual lleva 
+    por nombre <b>href</b>.
+    <br><br>
+    La sintaxis general de un enlace es por tanto de la forma:</p>
+  <p class="ejemploenlace"><b>&lt;a href="destino"&gt;contenido&lt;/a&gt;</b></p>
+  <p>Los enlaces pueden ser:</p>
+  <div class="tamañoletra">
+  <ul>
+    <li><b>Enlaces internos:</b> los que se dirigen a otras partes dentro de la misma página.</li>
+    <li><b>Enlaces locales:</b> los que se dirigen a otras páginas del mismo sitio web.</li>
+    <li><b>Enlaces remotos:</b> los dirigidos hacia páginas de otros sitios web.</li>
+    <li><b>Enlaces con direcciones de correo:</b> para crear un mensaje de correo dirigido a una dirección.</li>
+    <li><b>Enlaces con archivos:</b> para que los usuarios puedan hacer download de ficheros.</li>
+  </ul>
+  </div>
+  <p><b><u>Enlaces Internos</u></b></p>
+  <p>Son los enlaces que apuntan a un lugar diferente dentro de la misma página. Este tipo de enlaces son utilizados en páginas donde 
+    el acceso a los contenidos puede dificultarse debido al gran tamaño de la misma. Mediante estos 
+    enlaces podemos ofrecer al visitante la posibilidad de acceder rápidamente al principio o final de la página o bien a diferentes 
+    párrafos o secciones.</p>
+  <p>Para crear un enlace de este tipo es necesario, aparte del enlace de origen, un segundo enlace que será 
+    colocado en el destino. Ejemplo:</p>
+  <p>Enlace de Origen: <b class="ejemploenlace">&lt;a href="#abajo"&gt;Ir abajo&lt;/a&gt;</b></p>
+  <p>Este símbolo <b>#</b>, especifica al navegador que el enlace apunta a una sección en particular.</p>
+  <p>Enlace de Destino: <b class="ejemploenlace">&lt;a name="abajo"&gt;&lt;/a&gt;</b></p>
+  <p><b><u>Enlaces Locales</u></b></p>
+  <p>Para crear este tipo de enlaces, tenemos que crear una etiqueta de la siguiente forma:</p>
+  <p><b class="ejemploenlace">&lt;a href="archivo.html"&gt;contenido&lt;/a&gt;</b></p>
+  <p><b> Para una mejor organización, los sitios suelen estar ordenados por directorios</b>. Para señalar el directorio hay que usar la
+    barra <b>"/"</b>. 
+  <br>Ejemplo: <b>Lenguaje de Marcas/Tutorial HTML y CSS/tutorial.html</b></p>
+  <p><b><u>Enlaces Externos</u></b></p>
+  <p>Hay 3 tipos:</p>
+  <p><u>Enlaces remotos:</u></p>
+  <p>Son los enlaces que se dirigen hacia páginas que se encuentran fuera de nuestro sitio web, es decir, cualquier otro documento 
+    que no forma parte de nuestro sitio.</p>
+  <p>Debemos de colocar en el atributo <b>href</b> de nuestra etiqueta <b>&lt;a&gt;</b> la URL o dirección de la página con 
+    la que queremos enlazar. Ejemplo:</p>
+  <p><b class="ejemploenlace">&lt;a href="http://www.google.com"&gt;ir a google.com&lt;/a&gt;</b></p>
+  <p><u>Enlaces a direcciones de correo:</u></p>
+  <p>os enlaces a direcciones de correo son aquellos que al pincharlos nos abre un nuevo mensaje de correo electrónico 
+    dirigido a una dirección de mail determinada.</p>
+  <p>Para colocar un enlace dirigido hacia una dirección de correo colocamos <b>mailto</b> (en el atributo href del enlace), seguido de 
+    la dirección de correo a la que se debe dirigir el enlace.</p>
+  <p>Así: <b class="ejemploenlace">&lt;a href="mailto:correo@gmail.com"&gt;correo@gmail.com&lt;/a&gt;</b></p>
+  <p><u>Enlaces con ficheros</u></p>
+  <p>Para enlazar con un archivo que se encuentra en el mismo directorio que la página se escribiría un enlace como este:
+    <b class="ejemploenlace">&lt;a href="mi_fichero.zip"&gt;Descarga mi_fichero.zip&lt;/a&gt;</b></p>
+  <h2><a name="Imágenes"></a>Imágenes</h2>
+  <p>La etiqueta que utilizaremos para insertar una imagen es <b><code class="colorcode">&lt;img&gt;</code></b>. Esta etiqueta no posee su cierre correspondiente y en 
+    ella tenemos que especificar la dirección de nuestra imagen mediante el atributo <b>src</b>.</p>
+  <p>La sintaxis queda entonces de la siguiente forma:</p>
+  <p class="ejemploimg">&lt;img src="imagen.png&gt;</p>
+  <p class="nota">Nota: Hay que añadir la extensión de la imagen que puede ser png, jpeg, gif, etc</p>
+  <p>Para expresar el camino, lo haremos de la misma forma que vimos para los enlaces. Tambíen la etiqueta &lt;img&gt; nos propone
+    otra serie de atributos.</p>
+  <p><b><u>Atributo alt</u></b></p>
+  <p>Dentro de las comillas de este atributo colocaremos una brevísima descripción de la imagen, la función que tiene es que mientras la 
+    imagen cargar se muestra una breve descripción de lo que trata la imagen.</p>
+  <p><b><u>Atributos height y width</u></b></p>  
+  <p>Definen la <b>altura y anchura</b> respectivamente de la imagen en pixeles. Ejemplo: 
+  <p><b><u>Atributo border</u></b></p>
+  <p>Definen el tamaño en pixels del cuadro que rodea la imagen.</p>
+  <p class="nota">Nota: border="0" para eliminar el borde</p>
+  <p><b><u>Atributos vspace y hspace</u></b></p>
+  <p>Sirven para indicar el espacio libre, en pixeles, que tiene que colocarse entre la imagen y los otros elementos que 
+    la rodean, como texto, otras imágenes, etc.</p>
+  <p><b><u>Atributo lowsrc</u></b></p>
+  <p>Con este atributo podemos indicar un archivo de la imagen de baja resolución.</p>
+  <p><u>Ejemplo de la utilización de los atributos:</u></p>
+  <p><b>&lt;img src="logos.png" width="28" height="21" alt="Tamaño original" border="3"&gt;</b></p>
+  <p><b><u>Alineación de imágenes</u></b></p>
+  <p>El atributo align que nos permite alinear la imagen a derecha, izquierda o centro de nuestra página. Al igual que sucedía con el 
+    texto. Para alinear una imagen se hace de la misma forma que con el texto. Sería así: 
+    <b>&lt;div align="center"&gt;&lt;img src="logo.gif"&gt;&lt;/div&gt;</b></p>
+  <div class="tamañoletra">
+  <p>Hay otros valores como:</p>
+  <ul>
+    <li><b>top:</b> Ajusta la imagen a la parte más alta de la línea.</li>
+    <li><b>bottom:</b> Ajusta el bajo de la imagen al texto.</li>
+    <li><b>Absbottom:</b> Colocara el borde inferior de la imagen a nivel del elemento más bajo de la línea.</li>
+    <li><b>middle:</b> Hace coincidir la base de la línea de texto con el medio vertical de la imagen.</li>
+    <li><b>absmiddle:</b> Ajusta la imagen al medio absoluto de la línea.</li>
+  </ul>
+  </div>
+  <p>Todo esto le vemeros con más profundidad en CSS.</p>
+  <h2><a name="Tablas"></a>Tablas</h2>
+  <p>Una tabla en un conjunto de celdas organizadas dentro de las cuales podemos alojar distintos contenidos.</p>
+  <p>Las tablas son definidas por las etiquetas <b><code class="colorcode">&lt;table&gt;</code> y <code class="colorcode">&lt;/table&gt;</code></b>. Dentro de estas dos etiquetas colocaremos 
+    todas las otras etiquetas, textos e imágenes que darán forma y contenido a la tabla.</p>
+  <p>Las tablas son descritas por líneas de izquierda a derecha. Cada una de estas líneas es definida por otra etiqueta y 
+    su cierre: <b><code class="colorcode">&lt;tr&gt;</code> y <code class="colorcode">&lt;/tr&gt;</code></b>. Dentro de cada línea, habrá diferentes celdas. Cada una de estas celdas será definida 
+    por otro par de etiquetas: <b><code class="colorcode">&lt;td&gt;</code> y <code class="colorcode">&lt;/td&gt;</code></b>. Dentro de estas etiquetas será donde colocaremos nuestro contenido.</p>
+  <p>Ejemplo:</p>
+ <section class="ejemplotabla"><b>&lt;table&gt; <br>
+  &lt;tr&gt; <br>
+  &lt;td&gt;Celda 1, linea 1&lt;/td&gt; <br>
+  &lt;td&gt; Celda 2, linea 1&lt;/td&gt; <br>
+  &lt;/tr&gt; <br>
+  &lt;tr&gt; <br>
+  &lt;td&gt; Celda 1, linea 2&lt;/td&gt; <br>
+  &lt;td&gt; Celda 2, linea 2&lt;/td&gt; <br>
+  &lt;/tr&gt; <br>
+  &lt;/table&gt;</b></p>
+  </section>
+  <p>Resultado:</p>
+  <section class="resultadotabla">
+  <table>
+    <tr>
+    <td> <b>Celda 1, linea 1</b></td>
+    <td> <b>Celda 2, linea 1</b></td>
+    </tr>
+    <tr>
+    <td> <b>Celda 1, linea 2</b></td>
+    <td> <b>Celda 2, linea 2</b></td>
+    </tr>
+    </table>
+  </section>
+  <p>Los atributos para las tablas, se ven en el CSS. <a href="Tutorial_CSS.html">Click aquí para ir al tutoial</a></p></p>
+  <h2><a name="Formularios"></a>Formularios</h2>
+  <p>Los formularios son <b>cajas de texto y botones</b> que podemos encontrar en muchas páginas web. Son muy utilizados para realizar 
+    búsquedas o bien para introducir datos personales por ejemplo en sitios de comercio electrónico. Los datos que el usuario 
+    introduce en estos campos son enviados al correo electrónico del administrador del formulario o bien a un programa que se 
+    encarga de procesarlo automáticamente.</p>
+  <p>Los formularios son definidos por medio de las etiquetas <b><code class="colorcode">&lt;form&gt;</code> y <code class="colorcode">&lt;/form&gt;</code></b>. Entre estas dos etiquetas colocaremos todos 
+    los campos y botones que componen el formulario. Dentro de esta etiqueta <b><code class="colorcode">&lt;form&gt;</code></b> debemos especificar algunos atributos:</p>
+  <p><b><u>action</u></b></p>
+  <p>Define el tipo de acción a llevar a cabo con el formulario, existen dos posibilidades:</p>
+  <div class="tamañoletra">
+  <li>El formulario es enviado a una dirección de correo electrónico.</li>
+  <li>El formulario es enviado a un programa o script que procesa su contenido.</li>
+  </div>
+  <p>En el primer caso, el contenido del formulario es enviado a la dirección de correo electrónico especificada por medio de una 
+    sintaxis:<br><br> <b class="ejemploform">&lt;form action="mailto:direccion@correo.com"&gt;...&lt;/form&gt;</b></p>
+  <p>Si lo que queremos es que el formulario sea procesado por un programa, hemos de especificar la dirección del archivo que contiene dicho 
+    programa. La etiqueta quedaría en este caso de la siguiente forma: <b>&lt;form action="dirección del archivo"&gt;...&lt;/form&gt;</b></p>
+  <p><b><u>method</u></b></p>
+  <p>Este atributo se encarga de especificar la forma en la que el formulario es enviado. Los dos valores posibles que puede tomar esta 
+    atributo son <b>post y get</b>. A efectos prácticos y, salvo que se os diga lo contrario, daremos siempre el valor <b>post</b>.</p>
+  <p><b><u>enctype</u></b></p>
+  <p>Se utiliza para indicar la forma en la que viajará la información que se mande por el formulario. En el caso de enviar 
+    el formulario por correo electrónico, el valor de este atributo debe de ser <b>"text/plain"</b>. Así conseguimos que se envíe el contenido 
+    del formulario como texto plano dentro del email.</p>
+  <p>Ejemplo de la etiqueta <b>form</b>:</p>
+  <p class="ejemploform">&lt;form action="mailto:direccion@correo.com (o nombre del archivo)" method="post" enctype="text/plain"&gt;...&lt;/form&gt;</p>
+  <p>Para ver los elementos ir aquí: <a href=Formulario.html>Elementos del Formulario</a></p>
+  <h2><a name="Marcos"></a>Marcos</h2>
+  <p>El elemento <b><code class="colorcode">&lt;iframe&gt;</code></b> representa un contexto de navegación anidado, el cual permite incrustrar 
+    otra página HTML en la página actual. Su sintaxis es de la siguiente manera:<br><br>
+    <b class="ejemploiframe">&lt;iframe src=Tutorial_HTML_y_CSS.html&gt;&lt;/iframe&gt;</b></p>
+  <p>Se visualiza así:<br><iframe src=Tutorial_HTML_y_CSS.html></iframe></p>
+  <p>Los iframe tienen sus atributos:</p>
+  <div class="tamañoletra">
+    <li>srcdoc</li>
+    <li>sandbox</li>
+    <li>allowfullscreen</li>
+    <li>width</li>
+    <li>height</li>
+  </div>
+  <p>La sintaxis ccon alunos de sus atributos es: <br><br>
+    <b>&lt;iframe id="inlineFrameExample"<br>
+    &nbsp;&nbsp;title="Inline Frame Example"<br>
+    &nbsp;&nbsp;width="300"<br>
+    &nbsp;&nbsp;height="200"<br>
+    &nbsp;&nbsp;src=Tutorial_HTML_y_CSS.html&gt;<br>
+    &lt;/iframe&gt;</b></p>
+  <h2><a name="Multimedia"></a>Multimedia</h2>
+  <p>Mediante una serie de etiquetas podemos introducir sonido y video en nuestras páginas. Estas etiquetas llevan una serie de 
+    atributos para indicar el archivo y las características que queremos incorporar.</p>
+    <p><b><u>Audio</u></b></p>
+    <p>Para implantar el audio se usa esta etiqueta <b><code class="colorcode">&lt;audio&gt;</code></b>. Ejemplo:<b class="ejemplomultimedia"> &lt;audio src=musica.mp3&gt;&lt;/audio&gt;</b></p>
+    <p><b><u>Video</u></b></p>
+    <p>Para el video se usa la siguiente etiqueta <b><code class="colorcode">&lt;video&gt;</code></b>. Ejemplo:<b class="ejemplomultimedia"> &lt;video src="video.mp4" width="640" height="480"&gt;&lt;/video&gt;</b></p>
+    <p class="nota">Nota: Hay que tener en cuenta los formatos de video compatibles con cada navegador.</p>
+    <p>Los atributos del elemento <b><code class="colorcode">&lt;video&gt;</code></b></p>
+    <div class="multimedia">
+      <li><b>controls</b>: Muestra los controles de reproducción. Por defecto no se muestran.</li>
+      <li><b>width: Indica el tamaño de ancho del video.</b></li>
+      <li><b>height</b>: Indica el tamaño de alto del video.</li>
+      <li><b>muted</b>: Establece el video sin sonido (silenciado).</li>
+      <li><b>loop</b>: Vuelve a iniciar el video cuando finaliza su reproducción (bucle).</li>
+      <li><b>autoplay</b>: Comienza a reproducir el video automáticamente.</li>
+      <li><b>preload</b>: Puede ser	<b>auto, metadata y none</b>,	indica como realizar la precarga del video.</li>
+      <li><b>src</b>: Dirección del	video a reproducir, es obligatoria si actua como etiqueta contenedora.</li>
+      <li><b>poster:</b>	Muestra una imagen a modo de presentación.</li>
+    </div>
+    <p>Ejemplo: <b>&lt;video src="video.mp4" autoplay muted loop controls&gt;&lt;/video&gt;</b></p>
+    <p><u>Etiquetas más avanzadas</u></p>
+    <p>Si utilizamos la etiqueta <b><code class="colorcode">&lt;video&gt;</code></b> como etiqueta contenedora, podemos incluir etiquetas <b><code class="colorcode">&lt;source&gt;</code></b> en su interior para 
+      proporcionar formatos alternativos y tener mayor compatibilidad con otros navegadores</p>
+    <div class="multimedia">
+      <li><b>&lt;source&gt;</b>: Puede tener <b>src, type</b>, establece un archivo de video o lo añade como alternativa.</li>
+      <li><b>&lt;track&gt;</b>: Puede tener	<b>src, srclang, label, kind, default</b>, establece un archivo de subtítulos o lo 
+        añade como alternativa.</li>
+      <li><b>#t=[inicio][,fin]</b>: Especifica el momento concreto del video</li>
+    </div>
+    <p>Ejemplo:<br><br> 
+      <div class="ejemplomultimedia">
+      <b>&lt;video controls&gt;<br>
+        &nbsp;&nbsp;&lt;source src="video.mp4#t=03,08" type="video/mp4"&gt;<br>
+      &lt;/video&gt;</b></p>
+    </div>
+    <div>
+      <video controls>
+        <source src="Videos//video.mp4#t=03,08" type="video/mp4">
+      </video>
+    </div>
+    <hr>
+    <!--Pie de Página-->
+    <footer>
+      <p class="piedepagina"><a href="#Indice">Ir al Indice</a></p>
+      <p class="piedepagina">Realizado Por: Javier</p>
+      <p class="piedepagina">Copyright © todos los derechos reservados</p>
+      <img class="derechos" src="Copyright//Derechos de autor.jpg">
+    </footer>
+</body>
+</html>

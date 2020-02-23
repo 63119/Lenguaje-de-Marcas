@@ -1,0 +1,15 @@
+body{background-color:gainsboro;}
+h1{text-align: center;}
+h2{
+  text-align: center;
+  background-color: skyblue;
+}
+p{font-size: 18px;}
+img.derechos{
+  margin-left: 40%;
+  width: 20%;
+}
+p.piedepagina{
+  font-size: 18px;
+  text-align: center;
+}

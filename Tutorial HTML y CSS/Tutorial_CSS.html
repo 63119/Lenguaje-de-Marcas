@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Javier" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="Logos/css.jpg">
+    <link type="text/css"rel="stylesheet" href="Estilos//estilocss.css">
+    <title>Tutorial CSS</title>
+</head>
+<body>
+    <!--Encabezado/Navegación-->
+    <nav>
+        <a href="Tutorial_HTML_y_CSS.html">Introducción</a> |
+        <a href="Tutorial_HTML.html">Tutorial HTML</a> 
+      </nav>
+      <!--Tutorial-->
+    <h1>Tutorial de CSS</h1>
+    <hr>
+    <ol class="indice"><a name="Indice"></a><b><u>Indice:</u></b>
+        <br><br>
+        <li><a href="#Sintaxis del CSS">Sintaxis del CSS</a></li>
+        <li><a href="#Colores">Colores</a></li>
+        <li><a href="#Clases">Clases</a></li>
+        <li><a href="#Fuentes">Fuentes</a></li>
+        <li><a href="#Texto">Texto</a></li>
+        <li><a href="#Modelo de Caja">Modelo de Caja</a></li>
+        <li><a href="#Fondo">Fondo</a></li>
+        <li><a href="#Visualizacion">Visualización</a></li>
+        <li><a href="#Posicionamiento">Posicionamiento</a></li>
+        <li><a href="#Elementos Flotantes">Elementos Flotantes</a></li>
+        <li><a href="#Acceso">Acceso</a></li>
+        <li><a href="#Otros modos de Visualizacion">Otros modos de Visualización</a></li>
+        <li><a href="#Media Queries">Media Queries</a></li>
+    </ol>
+    <br>
+    <h2><a name="Sintaxis del CSS"></a>Sintaxis del CSS</h2>
+    <p>El CSS se usa para dar formato a un sitio web. Estos archivos se deben de guardar con las extensión <b>.css</b></p>
+    <p>El CSS se compone de cuatro partes:
+        <div class="selectorindice">
+        <li><b>Selector</b></li>
+        <li><b>Declaración</b></li>
+        <li><b>Propiedades</b></li>
+        <li><b>Valor de la propiedad</b></li></p>
+    </div>
+    <p><b><u>Selector</u></b></p>
+    <p>Permiten acceder a cualquier elemento o grupo de elementos, para aplicar estilos sobre el/ellos en una única declaración.</p>
+    <p>Para aplicar a una etiqueta un conjunto de estilos determinado, se escribe el selector y colocamos los atributos de estilos 
+        encerrados entre llaves:</p>
+    <div class="selector">
+        <b>selector {<br>
+        &nbsp;&nbsp;color: red;<br>
+        &nbsp;&nbsp;width: auto;<br>
+        }</b>
+    </div>
+    <p>Existen selectores de lo más variado, que permiten ajustar de una manera precisa qué elementos se desea seleccionar. 
+        Los más importantes son los siguientes:</p>
+        <div class="selectorindice">
+        <li><b>Etiqueta</b>: Sirven para seleccionar todos los elementos de una misma etiqueta o tag HTML.</li>
+            <div class="selector">
+                <b>h1 {<br>
+                &nbsp;&nbsp;font-size: 26px;<br>
+                }</b>
+            </div>
+        <li><b>Clase</b>: Selecciona todos los elementos de una clase determinada. (Class de CSS).</li>
+            <div class="selector">
+                <b>.destacado {<br>
+                &nbsp;&nbsp;font-weight: bold;<br>
+                &nbsp;&nbsp;color: orange;<br>
+                }</b>
+            </div>
+        <li><b>Identificador</b>: Permite seleccionar etiquetas individuales por el atributo Id de la etiqueta.</li>
+            <div class="selector">
+                <b>#identificador {<br>
+                &nbsp;&nbsp;border: 1px solid #99c; <br>
+                }</b>
+            </div>
+        <li><b>Atributo</b>: Permite seleccionar todas las etiquetas que tengan un atributo dado, o bien un atributo con un valor 
+            determinado.</li>
+            <div class="selector">
+                <b>[title] {<br>
+                &nbsp;&nbsp;text-decoration: none; <br>
+                } <br> <br>
+                [align="center"] {<br>
+                &nbsp;&nbsp; border: 1px solid red;<br>
+                }</b>
+            </div>
+        </div>
+    <p>Tambíen todo esto se puede combinar entre sí. Aquí un ejemplo:</p>
+        <div class="selector">
+            <b>img[alt] {<br>
+            &nbsp;&nbsp;border: none; <br>
+            } <br> <br>
+            p.desactivado {<br>
+            &nbsp;&nbsp;color: #ddd;<br>
+            }</b>
+        </div>
+    <p>Esto significa que obtienen las imágenes que tengan el atributo alt y los párrafos que tengan la clase "desactivado". También se puede
+        combinar los selectores usando una coma.</p>
+        <div class="selector">
+            <b>p, div.bloque {<br>
+            &nbsp;&nbsp;margin-bottom: 25px; <br>
+            } </b>
+        </div>
+    <p>Otros selectores:</p>
+    <table class="ajustetabla">
+        <tr>
+            <th>Selector</th><th>Ejemplo</th><th>Descripción</th>
+        </tr>
+        <tr>
+            <td>elemento elemento</td><td>div p</td><td class="ajuste">Selecciona todos los elementos &lt;p&gt; dentro de los elementos &lt;div&gt;</td>
+        </tr>
+        <tr>
+            <td>elemento>elemento</td><td>div > p</td><td class="ajuste">Selecciona todos los elementos &lt;p&gt; donde el padre es un elemento &lt;div&gt;</td>
+        </tr>
+        <tr>
+            <td>elemento+elemento</td><td>div + p</td><td class="ajuste">Selecciona todos los elementos &lt;p&gt; que se colocan inmediatamente después de los elementos &lt;div&gt;</td>
+        </tr>
+        <tr>
+            <td>elemento1~elemento2</td><td>p ~ ul</td><td class="ajuste">Selecciona cada elemento &lt;ul&gt; precedido por un elemento&lt;p&gt;</td>
+        </tr>
+        <tr>
+            <td>:link</td><td>a:link</td><td class="ajuste">Selecciona todos los enlaces no visitados. (Enlaces)</td>
+        </tr>
+        <tr>
+            <td>:visited</td><td>a:visited</td><td class="ajuste">Selecciona todos los enlaces visitados. (Enlaces)</td>
+        </tr>
+        <tr>
+            <td>:hover</td><td>a:hover</td><td class="ajuste">Selecciona enlaces al pasar el ratón. (Acción del usuario)</td>
+        </tr>
+        <tr>
+            <td>:focus</td><td>	input:focus	</td><td class="ajuste">Selecciona el elemento de entrada activado por teclado. (Acción del usuario)</td>
+        </tr>
+        <tr>
+            <td>:active</td><td>a:active</td><td class="ajuste">Selecciona el enlace activo. (Acción del usuario)</td>
+        </tr>
+        <tr>
+            <td>:enabled</td><td>input:enabled</td><td class="ajuste">Selecciona cada elemento &lt;input&gt; habilitado. (Formularios)</td>
+        </tr>
+        <tr>
+            <td>:checked</td><td>input:checked</td><td class="ajuste">Selecciona cada elemento &lt;input&gt; marcado. (Formularios)</td>
+        </tr>
+        <tr>
+            <td>::first-line</td><td>p::first-line</td><td class="ajuste">Selecciona la primera línea de cada elemento &lt;p&gt;</td>
+        </tr>
+        <tr>
+            <td>::first-letter</td><td>p::first-letter</td><td class="ajuste">Selecciona la primera letra de cada elemento &lt;p&gt;</td>
+        </tr>
+    </table>
+    <h2><a name="Colores"></a>Colores</h2>
+    <p>Para empezar se crea el selector y dentro de él se añade <b>color</b></p>
+    <p>Los colores podemos especificarlos de diferentes formas:</p>
+    <p><u>Colores RGB</u></p>
+    <p>Se especifica un valor de color RGB con: <b>rgb ( <b class="ROJO">ROJO</b>, <b class="VERDE">VERDE</b>, <b class="AZUL">AZUL</b>)</b>.</p>
+    <p>Cada parámetro define la intensidad del color como un número entero entre 0 y 255. Ejemplo: <b>p{color: rgb(0, 0, 255);}</b> se representa en
+        color azul.</p>
+    <p><u>Colores Hexadecimales</u></p>
+    <p>Se especifica con: <b># <b class="RR">RR</b> <b class="GG">GG</b> <b class="BB">BB</b></b></p> 
+    <p>Son enteros hexadecimales entre 00 y FF que especifican la intensidad del color. Ejemplo: <b>p{color: #FF0000;}</b></p>
+    <p><u>Nombre de Colores</u></p>
+    <p>El CSS soporta 140 nombres. Para espeficicar el color solo hay que poner el nombre del color en inglés. Ejemplo: <b>p{color: blue;}</b></p>
+    <p class="colores"><b>Aquí hay una lista de los colores más comunes: <a href="https://htmlcolorcodes.com/es/">Colores</a></b></p>
+    <h2><a name="Clases"></a>Clases</h2>
+    <p>El <b>.class</b> selecciona elementos con un atributo de clase específico. Por ejemplo <b>div.class {background-color: red;}</b></p>
+    <p>Para que la clase creada tenga efecto en el HTML es necesario añadir el atributo <b>class</b>, de la siguiente manera:
+        <b>&lt;div class="class"&gt;</b></p>
+    <h2><a name="Fuentes"></a>Fuentes</h2>
+    <p>Definen la familia de fuentes, la negrita, el tamaño y el estilo de un texto.</p>
+    <p><b><u>Familias de Fuentes</u></b></p>
+    <div class="tamañoletra">
+        <p><i>Hay dos tipos de nombres de familias de fuentes:</i></p>
+        <ul>
+            <li><b>Familia Genérica:</b> Un grupo de familias de fuentes con un aspecto similar (como "Serif" o "Monospace")</li>
+            <li><b>Familia de Fuentes:</b> Una familia de fuentes específica (como "Times New Roman" o "Arial") </li>
+        </ul>
+    </div>
+    <p><b><u>Familia tipográfica</u></b></p>
+    <p>La familia de fuentes de un texto se establece con la propiedad <b class="fontfamily">font-family</b>.</p>
+    <p>La <b class="fontfamily">font-family</b> debe contener varios nombres de fuente como un sistema "alternativo". Si el navegador no admite 
+        la primera fuente, intenta con la siguiente fuente, y así sucesivamente.</p>
+    <p class="nota">Nota : Si el nombre de una familia de fuentes es más de una palabra, debe estar entre comillas, como: "Times New Roman".</p>
+    <div class="selector">
+        <b>p { <br>
+            font-family: "Times New Roman", Times, serif;<br>
+          }</b>
+    </div>
+    <p><b><u>Estilo de Fuente</u></b></p>
+    <p>La <b><code class="colorcode">font-style</code></b> se usa principalmente para especificar texto en cursiva.</p>
+    <div class="tamañoletra">
+        <p><i>Tiene 3 valores:</i></p>
+        <ul>
+            <li><b>Normal</b>: El texto se muestra normalmente</li>
+            <li><b>Cursiva</b>: El texto se muestra en cursiva</li>
+            <li><b>Oblicuo</b>: El texto es "inclinado"</li>
+        </ul>
+        <div class="selector">
+            <b>p.normal { <br>
+                font-style: normal;<br>
+              }<br>
+              <br>
+              p.italic {<br>
+                font-style: italic;<br>
+              }<br>
+              <br>
+              p.oblique {<br>
+                font-style: oblique;<br>
+              }</b>
+        </div>
+    </div>
+    <p><b><u>Tamaño de Fuente</u></b></p>
+    <p>La <b><code class="colorcode">font-size</code></b> establece el tamaño del texto.</p>
+    <div class="tamañoletra">
+        <p>El valor del tamaño de fuente puede ser un tamaño absoluto o relativo.</p>
+        <ul><b><u><i>Tamaño Absoluto:</b></u></i>
+            <pre></pre>
+            <li>Establece el texto a un tamaño especificado.</li>
+            <li>No permite que un usuario cambie el tamaño del texto en todos los navegadores.</li>
+            <li>El tamaño absoluto es útil cuando se conoce el tamaño físico de la salida.</li>
+        </ul>
+        <ul><b><u><i>Tamaño Relativo</b></u></i>
+            <pre></pre>
+            <li>Establece el tamaño relativo a los elementos circundantes.</li>
+            <li>Permite a un usuario cambiar el tamaño del texto en los navegadores.</li>
+        </ul>
+    </div>
+    <div class="tamañoletra">
+        <p>El tamaño de puede establecer de 3 maneras:</p>
+        <ul>
+            <li><b>Con Píxeles</b>: h1{font-size: 40px;}</li>
+            <li><b>Con Em</b>: 1em es 16px, h1{font-size: 2.5em;}</li>
+            <li><b>Combinación de Porcentaje y Em</b>: Establecer un tamaño de fuente predeterminado en porcentaje para el <b>body</b>.</li>
+        </ul>
+    </div>
+    <p><b><u>Peso de Fuente</u></b></p>
+    <p>La <b><code class="colorcode">font-weight</code></b> especifica el peso de una fuente.</p>
+    <div class="selector">
+        <b>p.normal {<br>
+            font-weight: normal;<br>
+          }<br>
+          <br>
+          p.thick {<br>
+            font-weight: bold;<br>
+          }</b>
+    </div>
+    <p><b><u>Variante de Fuente</u></b></p>
+    <p>La <b><code class="colorcode">font-variant</code></b> especifica si un texto debe mostrarse o no en letra minúscula.</p>
+    <div class="selector">
+        <b>p.normal { <br>
+            font-variant: normal;<br>
+          }<br>
+          <br>
+          p.small {<br>
+            font-variant: small-caps;<br>
+          }</b>
+    </div>
+    <h2><a name="Texto"></a>Texto</h2>
+    <p><b><u>Alineación</u></b></p>
+    <p>El <b><code class="colorcode">text-align</code></b> se usa para establecer la alineación horizontal de un texto.<br><br> Un texto puede alinearse a la izquierda o 
+        derecha, centrarse o justificarse.</p>
+    <div class="tamañoletra">
+        <p><i>Hay 4 tipos de alineación:</i></p>
+        <ul>
+            <li><b>Centro:</b><b class="text"> text-align: center;</b></li>
+            <li><b>Izquierda:</b><b class="text"> text-align: left;</b></li>
+            <li><b>Derecha:</b><b class="text"> text-align: right;</b></li>
+            <li><b>Justificado:</b><b class="text"> text-align: justify;</b></li>
+        </ul>
+    </div>
+    <p><b><u>Decoración del Texto</u></b></p>
+    <p>La propiedad <b><code class="colorcode">text-decoration</code></b> se usa para establecer o eliminar decoraciones del texto.</p>
+    <div class="tamañoletra">
+            <li><b>text-decoration: none;</b> Se usa a menudo para eliminar subrayados de enlaces.</li>
+            <li><b>text-decoration: overline;</b> Añade una raya arriba del texto.</li>
+            <li><b>text-decoration: line-through;</b> Se usa para tachar el texto.</li>
+            <li><b>text-decoration: underline;</b> Se usa para subrayar el texto.</li>
+    </div>
+    <p><b><u>Transformación del Texto</u></b></p>
+    <p>La <b><code class="colorcode">text-transform</code></b> se utiliza para especificar letras mayúsculas y minúsculas en un texto.</p>
+    <div class="tamañoletra">
+        <li><b>text-transform: uppercase;</b> Transforma el texto en mayúsculas.</li>
+        <li><b>text-transform: lowercase;</b> Transforma el texto en minúsculas.</li>
+        <li><b>text-transform: capitalize;;</b> Convierte la primera letra de cada palábra en mayúsculas.</li>
+    </div>
+    <p><b><u>Sangría del Texto</u></b></p>   
+    <p>La <b><code class="colorcode">text-indent</code></b> se utiliza para especificar la sangría de la primera línea de un texto: <b>text-indent: 50px;</b></p>
+    <p><b><u>Espaciado</u></b></p>
+    <div class="tamañoletra">
+    <li>La <b>letter-spacing</b>: Se utiliza para especificar el espacio entre los caracteres en un texto: <b> letter-spacing: 3px;</b></li>
+    <li>La <b>line-height</b>: Se usa para especificar el espacio entre líneas: <b>line-height: 0.8;</b></li>
+    <li>La <b>word-spacing</b>: Se utiliza para especificar el espacio entre las palabras en un texto.</li>
+    </div>
+    <p class="nota">Nota: Para aumentar se usa el símbolo <b>+</b> y para disminuir se usa el símbolo <b>-</b></p>
+    <p><b><u>Aineación Vertical</u></b></p> 
+    <p>La <b><code class="colorcode">vertical-align</code></b> establece la alineación vertical de un elemento. Ejemplo: <b>vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;</b></p>
+    <p>A continuación se muestra una tabla con todos los valores posibles:</p>
+    <table class="ajustetabla">
+        <tr>
+            <th>Valor</th><th>Propiedad</th>
+        </tr>
+        <tr>
+            <td>baseline</td><td class="ajuste">El elemento está alineado con la línea base del padre. Esto es por defecto.</td>
+        </tr>
+        <tr>
+            <td>length</td><td class="ajuste">Sube o baja un elemento en la longitud especificada. Se permiten valores negativos.</td>
+        </tr>
+        <tr>
+            <td>%</td><td class="ajuste">Sube o baja un elemento en un porcentaje de la propiedad "line-height". Se permiten valores negativos.</td>
+        </tr>
+        <tr>
+            <td>sub</td><td class="ajuste">El elemento está alineado con la línea de base del subíndice del padre.</td>
+        </tr>
+        <tr>
+            <td>super</td><td class="ajuste">El elemento está alineado con la línea base superíndice del padre.</td>
+        </tr>
+        <tr>
+            <td>top</td><td class="ajuste">El elemento está alineado con la parte superior del elemento más alto de la línea.</td>
+        </tr>
+        <tr>
+            <td>text-top</td><td class="ajuste">El elemento está alineado con la parte superior de la fuente del elemento principal.</td>
+        </tr>
+        <tr>
+            <td>middle</td><td class="ajuste">El elemento se coloca en el medio del elemento padre</td>
+        </tr>
+        <tr>
+            <td>bottom</td><td class="ajuste">El elemento está alineado con el elemento más bajo de la línea.</td>
+        </tr>
+        <tr>
+            <td>text-bottom</td><td class="ajuste">El elemento está alineado con la parte inferior de la fuente del elemento principal.</td>
+        </tr>
+        <tr>
+            <td>initial</td><td class="ajuste">Establece esta propiedad en su valor predeterminado.</td>
+        </tr>
+        <tr>
+            <td>inherit</td><td class="ajuste">Hereda esta propiedad de su elemento padre.</td>
+        </tr>
+    </table>
+    <h2><a name="Listas"></a>Listas</h2>
+    <p>Las propide en CSS permiten hacer esto:</p>
+    <div class="tamañoletra">
+        <li>Establecer diferentes marcadores de elementos de lista para listas ordenadas.</li>
+        <li>Establecer diferentes marcadores de elementos de lista para listas desordenadas.</li>
+        <li>Establecer una imagen como marcador de elemento de lista.</li>
+        <li>Agregue colores de fondo a las listas y elementos de la lista.</li>
+    </div>
+    <p><b><u>Tipos de Marcadores</u></b></p>
+    <p>La <b><code class="colorcode">list-style-type</code></b> especifica el tipo de marcador de elemento de lista.</p> 
+    <p>Ejemplo:</p>
+    <div class="lista">
+        <b>ul.a {<br>
+            list-style-type: circle;<br>
+          }<br>
+          <br>
+          ul.b {<br>
+            list-style-type: square;<br>
+          }<br>
+          <br>
+          ol.c {<br>
+            list-style-type: upper-roman;<br>
+          }<br>
+          <br>
+          ol.d {<br>
+            list-style-type: lower-alpha;<br>
+          }</b>
+    </div>
+    <p><b><u>Imagen como Marcador</u></b></p>
+    <p>La <b><code class="colorcode">list-style-image</code></b> especifica una imagen como marcador de elemento de lista:</p>
+    <div class="lista">
+        <b>ul { <br>
+            list-style-image: url('sqpurple.gif');<br>
+          }</b>
+    </div>
+    <p><b><u>Colocar los marcadores de Elementos</u></b></p>
+    <p>La <b><code class="colorcode">list-style-position</code></b> especifica la posición de los marcadores de elementos de la lista.</p>
+    <div class="tamañoletra">
+        <li><b>list-style-position: outside;</b> Las viñetas estarán fuera del elemento de la lista. 
+            El inicio de cada línea de un elemento de la lista se alineará verticalmente.</li>
+        <li><b>list-style-position: inside;</b> Las viñetas estarán dentro del elemento de la lista. Como es parte del elemento de la lista, será parte del texto 
+            y empujará el texto al principio.</li>
+    </div>
+    <h2><a name="Modelo de Caja"></a>Modelo de Caja</h2>
+    <img class="ModeloCaja" src="Capturas//ModeloCaja.png">
+    <p>El modelo de caja tiene diferentes partes:</p>
+    <div class="listacaja">
+    <ul>
+    <li><b>Content</b>: El contenido del cuadro, donde aparecen el texto y las imágenes.</li>
+    <li><b>Padding</b>: Genera espacio alrededor del contenido de un elemento.</li>
+    <li><b>Border</b>: Un borde que rodea el relleno y el contenido.
+        <ul>
+            <b><li>border-style</b>
+                <ul>
+                    <li><b>dotted;</b> Define un borde punteado.</li>
+                    <li><b>dashed;</b> Define un borde punteado.</li>
+                    <li><b>solid;</b> Define un borde sólido.</li>
+                    <li><b>double;</b> Define un doble borde.</li>
+                    <li><b>groove;</b> Define un borde acanalado en 3D.</li>
+                    <li><b>ridge;</b> Define un borde ondulado en 3D.</li>
+                    <li><b>inset;</b> Define un borde insertado en 3D.</li>
+                    <li><b>outset;</b> Define un borde de inicio 3D.</li>
+                    <li><b>none;</b> Define sin borde.</li>
+                    <li><b>hidden;</b> Define un borde oculto.</li>
+
+                </ul>
+            </li>
+            <b><li>border-width</li>
+            <li>border-color</li></b>
+        </ul>
+    </li>
+    <li><b>Margin</b>: Crea espacio alrededor de los elementos, fuera de los bordes definidos..
+        <ul>
+            <b><li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li></b>
+        </ul>
+    </li>
+    </ul>
+    </div>
+    <p>Ejemplo:</p>
+    <div class="caja">
+        <b>div.caja {<br>
+            width: 300px;<br>
+            border: 15px solid green;<br>
+            padding: 50px;<br>
+            margin: 20px;<br>
+          }</b>
+    </div>
+    <h2><a name="Fondo"></a>Fondo</h2>
+    <div class="listacaja">
+        <p>Propiedades del fondo:</p>
+        <ul>
+            <li><b>background-color</b>: Especifica el color del fondo.</li>
+            <li><b>background-image</b>: Especifica una imagen para usar como fondo.</li>
+            <li><b>background-repeat</b>: Repite una imagen tanto horizontal como verticalmente.
+                <ul>
+                    <li><b>repeat-x;</b> Se repite en el eje X.</li>
+                    <li><b>repeat-y;</b> Se repite en el eje Y.</li>
+                    <li><b>no-repeat;</b> No se repite.</li>
+                    <li>none;</li>
+                </ul>
+            </li>
+            <li><b>background-attachment</b>: Especifica si la imagen de fondo debe desplazarse o no.
+                <ul>
+                    <li><b>scroll;</b> La imagen de fondo se desplazará con la página.</li>
+                    <li><b>fixed;</b> La imagen de fondo no se desplazará con la página.</li>
+                </ul>
+            </li>
+            <li><b>background-position</b>: determinada la posición del fondo
+                <ul>
+                    <li><b>left top;</b> Arriba a la izquierda.</li>
+                    <li><b>left center;</b> Centro izquierdo.</li>
+                    <li><b>left bottom;</b> Abajo a la izquierda.</li>
+                    <li><b>right top;</b> Arriba a la derecha.</li>
+                    <li><b>right center;</b> Centro derecho.</li>
+                    <li><b>right bottom;</b> Abajo a la derecha.</li>
+                    <li><b>center top;</b> Arriba en el centro.</li>
+                    <li><b>center center;</b> En en centro.</li>
+                    <li><b>center bottom;</b> Abajo en el centro.</li>
+                    <li><b>x% y%;</b> Posición con porcentajes.</li>
+                    <li><b>Apx Bpx;</b> Posición con px.</li>
+                    <li><b>initial;</b> Valor por defecto.</li>
+                    <li><b>inherit; Propiedad heredara del elemento padre.</b></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p>Ejemplo:</p>
+    <div class="fondo">
+        <b>div.caja {<br>
+            background-image: url("fondo.png");<br>
+            background-repeat: no-repeat;<br>
+            background-attachment: fixed;<br>
+          }</b>
+    </div>
+    <h2><a name="#Visualizacion"></a></a>Visualización</h2>
+    <p>La propiedad <b><code class="colorcode">display</code></b> especifica el comportamiento de visualización (el tipo de cuadro de representación) de un elemento.</p>
+    <div class="listavisualizacion">
+        <ul>
+            <li><b>display: inline;</b> Muestra un elemento como un elemento en línea, anchura y altura necesarias (suele ir con &lt;span&gt;).</li>
+            <li><b>display: block;</b> Muestra un elemento como un elemento de bloque, comienza en una nueva linea y suele utilizar todo el ancho (suele ir con &lt;p&gt;).</li>
+            <li><b>display: inline-block;</b> Muestra un elemento como un contenedor de bloque de nivel en línea, inline con width y height.</li>
+            <li><b>display: none;</b> El elemento se elimina por completo.</li>
+        </ul>
+    </div>
+    <p>Para ver más propiedades de display, haz <a href="https://www.w3schools.com/cssref/pr_class_display.asp"> click aquí</a></p>
+    <h2><a name="Posicionamiento"></a>Posicionamiento</h2>
+    <p><b><u>Posición</u></b></p>
+    <p>La <b><code class="colorcode">position</code></b> especifica el tipo de método de posicionamiento utilizado para un elemento.</p>
+    <p>Hay cinco valores de posición diferentes:</p>
+    <div class="posicion">
+        <ul>
+            <li><b>position: static;</b> No está posicionado de ninguna manera especial; siempre se posiciona de acuerdo con el flujo normal de la página.</li>
+            <li><b>position: relative;</b> Se coloca en relación con su posición normal.</li>
+            <li><b>position: fixed;</b> Coloca un elemento con respecto a la ventana gráfica, lo que significa que siempre permanece 
+                en el mismo lugar incluso si se desplaza la página. Las propiedades superior, derecha, inferior e izquierda se utilizan 
+                para posicionar el elemento.</li>
+            <li><b>position: absolute;</b> Se posiciona en relación con el ancestro posicionado más cercano.</li>
+        </ul>
+    </div>
+    <p><b><u>Posicionar texto en una Imagen</u></b></p>
+    <img  class="textosobreimagen" src="Capturas//textosobreimagen.jpg">
+    <p>Ejemplo:</p>
+    <section class="posicion">
+       <b> .container { <br>
+            position: relative;<br>
+          }<br>
+          <br>
+          .topleft {<br>
+            position: absolute;<br>
+            top: 8px;<br>
+            left: 16px;<br>
+            font-size: 18px;<br>
+          }<br>
+          <br>
+          img {<br> 
+            width: 100%;<br>
+            height: auto;<br>
+            opacity: 0.3;<br>
+          }</b>
+        </section>
+    <h2><a name="Elementos Flotantes"></a>Elementos Flotantes</h2>
+    <p>La propiedad <b><code class="colorcode">float</code></b> especifica cómo debe flotar un elemento.</p>
+    <p>La propiedad <b><code class="colorcode">clear</b></code> especifica qué elementos pueden flotar junto al elemento borrado y de qué lado.</p>
+    <p><b><u>Propiedad Flotante</u></b></p>
+    <p>La <b><code class="colorcode">float</code></b> se usa para posicionar y formatear contenido, por ejemplo, dejar que una imagen flote hacia la izquierda en el 
+        texto en un contenedor.</p>
+    <p>La propiedad puede tener uno de los siguientes valores:</p>
+    <section class="elementosflotantes">
+        <ul>
+            <li><b>float: right;</b> El elemento flota a la derecha de su contenedor.</li>
+            <li><b>float: left;</b> El elemento flota a la izquierda de su contenedor.</li>
+            <li><b>float: none;</b> El elemento no flota, es por defecto.</li>
+            <li><b>float: inherit;</b> El elemento hereda el valor flotante de su padre.</li>
+        </ul>
+    </section>
+    <p><b><u>Propiedad Clear</u></b></p>
+    <p>La propiedad <b><code class="colorcode">clear</b></code> especifica qué elementos pueden flotar junto al elemento borrado y de qué lado.</p>
+    <p>La propiedad puede tener uno de los siguientes valores:</p>
+    <section class="elementosclear">
+        <ul>
+            <li><b>clear: right;</b> No se permiten elementos flotantes en el lado derecho.</li>
+            <li><b>clear: left;</b> No se permiten elementos flotantes en el lado izquierdo.</li>
+            <li><b>clear: none;</b> Permite elementos flotantes en ambos lados, es por defecto.</li>
+            <li><b>clear: inherit;</b> El elemento hereda el valor clear de su padre.</li>
+            <li><b>clear: both;</b> No se permiten elementos flotantes ni en el lado izquierdo ni en el derecho.</li>
+        </ul>
+        </ul>
+    </section>
+    <h2><a name="Acceso"></a>Acceso</h2>
+    <p><b><u>Desbordamiento</u></b></p>
+    <p>La <b><code class="colorcode">overflow</code></b> especifica qué debería suceder si el contenido desborda el cuadro de un elemento.</p>
+    <p>Esta propiedad especifica si se debe recortar contenido o agregar barras de desplazamiento cuando el contenido de un elemento 
+        es demasiado grande para caber en un área específica.</p>
+    <section class="elementosoverflow">
+        <ul>
+            <li><b>overflow: scroll;</b> El desbordamiento se recorta, pero se agrega una barra de desplazamiento para ver el resto del contenido.</li>
+            <li><b>overflow: hidden;</b> El desbordamiento se recorta y el resto del contenido será invisible.</li>
+            <li><b>overflow: auto;</b> Permite elementos flotantes en ambos lados, es por defecto.</li>
+            <li><b>overflow: visible;</b> El desbordamiento no está recortado. Se procesa fuera del cuadro del elemento, es por defecto.</li>
+        </ul>
+        </ul>
+    </section>
+    <p class="nota">Nota: La propiedad solo funciona para elementos de bloque con una altura especificada.</p>
+    <p><b><u>Propiedad z-index</u></b></p>
+    <p>La <b><code class="colorcode">z-index</code></b> especifica el orden de apilamiento de un elemento.</p>
+    <li class="tamañodeletra"><b>z-index: number;</b> Establece el orden de apilamiento del elemento. Se permiten números negativos. Ejemplo: <b>img {z-index: -1;}</b></li>
+    <p class="nota">Nota: El z-index solo funciona en elementos posicionados (posición: absoluta, posición: relativa, posición: fija o posición: fija).</p>
+    <h2><a name="Otros modos de Visualizacion"></a>Otros modos de Visualización</h2>
+    <table class="ajustetabla">
+        <tr>
+            <th>Valor</th><th>Descripción</th>
+        </tr>
+        <tr>
+            <td>display: table;</td><td class="ajuste">El elemento se comporta como un elemento &lt;table&gt; (Tabla).</td>
+        </tr>
+        <tr>
+            <td>display: table-row;</td><td class="ajuste">El elemento se comporta como un elemento &lt;tr&gt; (Tabla).</td>
+        </tr>
+        <tr>
+            <td>display: table-cell;</td><td class="ajuste">El elemento se comporta como un elemento &lt;td&gt; (Tabla).</td>
+        </tr>
+        <tr>
+            <td> display: flex;</td><td class="ajuste">El contenedor flex se vuelve flexible (Caja flexible).</td>
+        </tr>
+        <tr>
+            <td>flex-direction: column|row|-reverse;</td><td class="ajuste">Define en qué dirección quiere el contenedor apilar los elementos flexibles (Caja flexible).</td>
+        </tr>
+        <tr>
+            <td>flex-wrap: wrap|nowrap|wrap-reverse;</td><td class="ajuste">Especifica si los elementos flexibles deben ajustarse o no (Caja flexible).</td>
+        </tr>
+        <tr>
+            <td> flex-flow: flex-direction|flex-wrap;</td><td class="ajuste">Propiedad abreviada para establecer las propiedades flex-direction y flex-wrap.</td>
+        </tr>
+    </table>
+    <h2><a name="Media Queries"></a>Media Queries</h2>
+    <p>Se utiliza la regla <b><code class="colorcode">@media</code></b> para incluir un bloque de propiedades CSS solo si cierta condición es verdadera.</p>
+    <p>Ejemplo:</p>
+    <div class="media">
+       <b> /* Para Escritorio: */<br>
+        .col-1 {width: 8.33%;}<br>
+        .col-2 {width: 16.66%;}<br>
+        .col-3 {width: 25%;}<br>
+        .col-4 {width: 33.33%;}<br>
+        .col-5 {width: 41.66%;}<br>
+        .col-6 {width: 50%;}<br>
+        .col-7 {width: 58.33%;}<br>
+        .col-8 {width: 66.66%;}<br>
+        .col-9 {width: 75%;}<br>
+        .col-10 {width: 83.33%;}<br>
+        .col-11 {width: 91.66%;}<br>
+        .col-12 {width: 100%;}<br>
+        <br>
+        @media only screen and (max-width: 768px) {<br>
+          /* Para Móviles: */<br>
+          [class*="col-"] {<br>
+            width: 100%;<br>
+          }</b>
+        }
+    </div>
+    <p>Para saber más del Media Quiries, haz <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp"> click aquí</a> </p>
+    <hr>
+    <!--Pie de Página-->
+    <footer>
+        <p class="piedepagina"><a href="#Indice">Ir al Indice</a></p>
+        <p class="piedepagina">Realizado Por: Javier</p>
+        <p class="piedepagina">Copyright © todos los derechos reservados</p>
+        <img class="derechos" src="Copyright//Derechos de autor.jpg">
+      </footer>
+</body>
+</html>

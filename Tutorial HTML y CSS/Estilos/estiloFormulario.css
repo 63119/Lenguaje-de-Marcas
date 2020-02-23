@@ -1,0 +1,42 @@
+body{font-size: 18px;}
+body{background-color:gainsboro;}
+h1{text-align: center;}
+h2{
+  text-align: center;
+  background-color: skyblue;
+}
+code.colorcode{
+    color: crimson;
+  }
+b.ejemploform {
+    border: transparent;
+    background-color: goldenrod;
+    font-size: 18px;
+    width: 450px;
+    padding: 10px;
+    margin: 20px;
+  }
+  section.ejemploformoption {
+    border: transparent;
+    background-color: goldenrod;
+    font-size: 18px;
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+  }
+  section.ejemploformbotones {
+    border: transparent;
+    background-color: goldenrod;
+    font-size: 18px;
+    width: 550px;
+    padding: 10px;
+    margin: 20px;
+  }
+  img.derechos{
+    margin-left: 40%;
+    width: 20%;
+  }
+  p.piedepagina{
+    font-size: 18px;
+    text-align: center;
+  }

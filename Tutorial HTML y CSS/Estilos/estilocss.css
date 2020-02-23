@@ -1,0 +1,173 @@
+body{background-color:gainsboro;}
+h1{text-align: center;}
+h2{
+  text-align: center;
+  background-color: skyblue;
+}
+ol.indice{
+  font-size: 20px;
+}
+p{font-size: 18px;}
+div.tamañoletra{font-size: 18px;}
+nav{font-size: 18px;}
+div.selector {
+    border: transparent;
+    background-color: goldenrod;
+    font-size: 18px;
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+  }
+div.selectorindice{font-size: 18px;}
+b.ROJO{color: red;}
+b.VERDE{color:green}
+b.AZUL{color:blue}
+b.RR{color: red;}
+b.GG{color: green;}
+b.BB{color: blue;}
+p.colores {
+  border: solid;
+  font-size: 18px;
+  width: 450px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+b.fontfamily{
+  font-family: 'Courier New', Courier, monospace;
+  color: crimson;
+}
+p.nota{font-size: 16px;}
+b.fontstyle{
+  font-style: oblique;
+  color: crimson;
+}
+b.font{
+  color: crimson;
+}
+pre{
+  font-family: initial;
+  font-size: 18px;}
+b.text{
+    color: crimson;
+  }
+b.vertical{
+  color: crimson;
+}
+table.ajustetabla{
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: lightgreen;
+}
+th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 6px;
+}
+td.ajuste{
+  text-align: initial;
+}
+b.list{
+  color: crimson;
+}
+div.lista {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+}
+img.ModeloCaja{
+  width: 40%;
+  margin-left: 30%;
+}
+div.caja {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 200px;
+  padding: 10px;
+  margin: 20px;
+}
+div.listacaja {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:800px;
+  padding: 10px;
+  margin: 20px;
+}
+div.fondo {
+  border: transparent;
+  background-image: url("Fondos//fondo.jpg");
+  font-size: 18px;
+  width: 350px;
+  padding: 10px;
+  margin: 20px;
+}
+code.colorcode{
+  color: crimson;
+}
+div.listavisualizacion {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:1200px;
+  padding: 10px;
+  margin: 20px;
+}
+section.posicion {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:180px;
+  padding: 10px;
+  margin: 20px;
+}
+img.textosobreimagen{
+  margin-left: 15%;
+}
+section.elementosflotantes {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:550px;
+  padding: 10px;
+  margin: 20px;
+}
+section.elementosclear {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:700px;
+  padding: 10px;
+  margin: 20px;
+}
+section.elementosoverflow {
+  border: transparent;
+  background-color: lightgreen;
+  font-size: 18px;
+  width:1200px;
+  padding: 10px;
+  margin: 20px;
+}
+li.tamañodeletra{font-size: 18px;}
+div.media {
+  border: transparent;
+  background-color: goldenrod;
+  font-size: 18px;
+  width: 400px;
+  padding: 10px;
+  margin: 20px;
+}
+img.derechos{
+  margin-left: 40%;
+  width: 20%;
+}
+p.piedepagina{
+  font-size: 18px;
+  text-align: center;
+}
